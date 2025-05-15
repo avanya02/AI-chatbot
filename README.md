@@ -19,7 +19,7 @@ This tool uses powerful open-source language models to generate informative cont
 - **Backend Models**:  
   - `ollama/qwen2.5:0.5`  
   - `llama3.2:1b`
-- **Language**: Python 
+- **Language**: Python | JavaScript | HTML | CSS
 
 ---
 
