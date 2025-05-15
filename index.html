@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <p id="heading">What do you want to learn today?</p>
+    <input id="prompt" placeholder="write here.."><br>
+    
+    <div id="button-container">
+        <button id="submit-button" onclick="sendPrompt()">Submit</button>
+        <div style="clear:both"></div>
+        <img src="{{ url_for('static', filename='images/loader2.gif') }}" style =" height:65px; width:auto; display: none;" id="lottie-load">
+        <!-- Write your comments here <img src="{{ url_for('static', filename='images/listen-modified.png') }}" >-->
+      <!--  <dotlottie-player id="lottie-load" src="https://lottie.host/ad292622-e7d7-41f2-8f6f-194764910ad7/tq36exE3W2.lottie" background="transparent" speed="1" style="width: auto; height: 90px; display: none; margin-top: 20px;" loop autoplay></dotlottie-player> -->
+    </div>
+
+    <div id="response-container">
+        <span id="response"></span><span class="cursor" id="cursor" style="display: none;"></span>
+    </div>
+    <p style="font-family: Didot, serif; font-size: 2em; color: rgb(116, 116, 191); font-style: italic; display: none;" id="practise">want to practise some questions?</p>
+    <button onclick="getQuestions()" style="display: none; margin: auto;" id="here">Here!</button>
+    <img src="{{ url_for('static', filename='images/loader2.gif') }}"style =" height:65px; width:auto; display:none; margin:0px auto;" id="lottie-que">
+
+   <!--  <dotlottie-player id="lottie-que" src="https://lottie.host/ad292622-e7d7-41f2-8f6f-194764910ad7/tq36exE3W2.lottie" background="transparent" speed="1" style="width: auto; height: 90px; display: none;" loop autoplay></dotlottie-player> -->
+
+    <p id="questions"></p>
+
+   <!--  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
+    
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>
